@@ -12,3 +12,16 @@ O que você aprenderá ao concluir este projeto:
 - Como analisar as dimensões de PCA e construir um novo espaço de atributos.
 - Como agrupar de forma ótima um conjunto de dados para encontrar padrões ocultos.
 - Como avaliar informações dadas pelos dados segmentados e utilizá-los de maneira significativa.
+
+## Descrição
+Uma distribuidora atacadista recentemente testou uma mudança em seu método de entrega para alguns clientes, trocando de um serviço de entrega cinco vezes por semana pela manhã para um serviço de entrega mais barato, três vezes por semana ao final da tarde. Teste iniciais não mostraram nenhum resultado insatisfatório significante, então eles implementaram a opção mais barata para todos os clientes. Quase imediatamente, a distribuidora começou a receber reclamações sobre as mudanças no serviço e clientes começaram a cancelar entregas — perdendo mais dinheiro do que estava sendo poupado. Você foi contratado pela distribuidora para descobrir que tipos de clientes eles têm, para que possam fazer decisões melhores e mais bem informadas no futuro. Sua tarefa é utilizar técnicas de aprendizagem não-supervisionada para ver se existe qualquer similaridade entre os clientes, e como melhor segmentá-los em categorias distintas.
+
+Software e bibliotecas
+Este projeto usará o seguinte software e bibliotecas de Python:
+
+- Python 2.7
+- NumPy
+- pandas
+- scikit-learn
+- matplotlib
+- Jupyter Notebook
