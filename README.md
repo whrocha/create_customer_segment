@@ -1,27 +1,49 @@
-# Criando segmentos de clientela
-## Visão geral do projeto
-Neste projeto, você aplicará técnicas de aprendizagem não supervisionada em dados sobre gastos, coletados de clientes de uma distribuidora atacadista em Lisboa, para identificar segmentos de clientes ocultos nos dados. Primeiro, você irá explorar os dados selecionando um pequeno subconjunto como amostra e determinar se alguma das categorias de produtos está altamente correlacionada com outra. Depois, pré-processará os dados, dimensionando cada categoria de produto e identificando (e removendo) valores aberrantes. De posse dos dados "limpos", você aplicará PCA a eles e implementará os algoritmos de clustering para criar os segmentos. Por último, irá comparar a segmentação encontrada com uma marcação adicional e considerar a maneira como essa informação poderia auxiliar a distribuidora atacadista com futuras mudanças de serviço.
+# Content: Unsupervised Learning
+## Project: Creating Customer Segments
 
-## Destaques do projeto
-Este projeto foi desenvolvido para você ter experiência prática com aprendizagem não supervisionada e trabalhar desenvolvendo conclusões para um cliente em potencial com um conjunto de dados do mundo real. Muitas empresas, hoje, colhem uma vasta quantidade de dados sobre clientes, e eles têm um forte desejo de entender o significado das relações escondidos em sua clientela. Ter essa informação pode ajudar o engenheiro da empresa com futuros produtos e serviços que melhor satisfazem as demandas ou necessidades de seus clientes.
+### Install
 
-O que você aprenderá ao concluir este projeto:
+This project requires **Python 2.7** and the following Python libraries installed:
 
-- Como aplicar técnicas de pré-processamento, como dimensionamento de atributos e detecção de valores aberrantes.
-- Como interpretar dados que foram dimensionados, transformados ou reduzidos por meio de PCA.
-- Como analisar as dimensões de PCA e construir um novo espaço de atributos.
-- Como agrupar de forma ótima um conjunto de dados para encontrar padrões ocultos.
-- Como avaliar informações dadas pelos dados segmentados e utilizá-los de maneira significativa.
+- [NumPy](http://www.numpy.org/)
+- [Pandas](http://pandas.pydata.org)
+- [matplotlib](http://matplotlib.org/)
+- [scikit-learn](http://scikit-learn.org/stable/)
 
-## Descrição
-Uma distribuidora atacadista recentemente testou uma mudança em seu método de entrega para alguns clientes, trocando de um serviço de entrega cinco vezes por semana pela manhã para um serviço de entrega mais barato, três vezes por semana ao final da tarde. Teste iniciais não mostraram nenhum resultado insatisfatório significante, então eles implementaram a opção mais barata para todos os clientes. Quase imediatamente, a distribuidora começou a receber reclamações sobre as mudanças no serviço e clientes começaram a cancelar entregas — perdendo mais dinheiro do que estava sendo poupado. Você foi contratado pela distribuidora para descobrir que tipos de clientes eles têm, para que possam fazer decisões melhores e mais bem informadas no futuro. Sua tarefa é utilizar técnicas de aprendizagem não-supervisionada para ver se existe qualquer similaridade entre os clientes, e como melhor segmentá-los em categorias distintas.
+You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html)
 
-Software e bibliotecas
-Este projeto usará o seguinte software e bibliotecas de Python:
+If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](http://continuum.io/downloads) distribution of Python, which already has the above packages and more included. Make sure that you select the Python 2.7 installer and not the Python 3.x installer. 
 
-- Python 2.7
-- NumPy
-- pandas
-- scikit-learn
-- matplotlib
-- Jupyter Notebook
+### Code
+
+Template code is provided in the `customer_segments.ipynb` notebook file. You will also be required to use the included `visuals.py` Python file and the `customers.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project. Note that the code included in `visuals.py` is meant to be used out-of-the-box and not intended for students to manipulate. If you are interested in how the visualizations are created in the notebook, please feel free to explore this Python file.
+
+### Run
+
+In a terminal or command window, navigate to the top-level project directory `customer_segments/` (that contains this README) and run one of the following commands:
+
+```bash
+ipython notebook customer_segments.ipynb
+```  
+or
+```bash
+jupyter notebook customer_segments.ipynb
+```
+
+This will open the Jupyter Notebook software and project file in your browser.
+
+## Data
+
+The customer segments data is included as a selection of 440 data points collected on data found from clients of a wholesale distributor in Lisbon, Portugal. More information can be found on the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Wholesale+customers).
+
+Note (m.u.) is shorthand for *monetary units*.
+
+**Features**
+1) `Fresh`: annual spending (m.u.) on fresh products (Continuous); 
+2) `Milk`: annual spending (m.u.) on milk products (Continuous); 
+3) `Grocery`: annual spending (m.u.) on grocery products (Continuous); 
+4) `Frozen`: annual spending (m.u.) on frozen products (Continuous);
+5) `Detergents_Paper`: annual spending (m.u.) on detergents and paper products (Continuous);
+6) `Delicatessen`: annual spending (m.u.) on and delicatessen products (Continuous); 
+7) `Channel`: {Hotel/Restaurant/Cafe - 1, Retail - 2} (Nominal)
+8) `Region`: {Lisbon - 1, Oporto - 2, or Other - 3} (Nominal) 
